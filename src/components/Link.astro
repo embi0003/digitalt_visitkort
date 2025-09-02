@@ -1,5 +1,35 @@
 ---
-// Henter parametrene fra Astro.props
-const { href="#", target="_self"} = Astro.props; 
+const {
+  href = "#",
+  target = "_self",
+  variant = "textlink",
+  size = "standard",
+} = Astro.props;
+
+const baseClasses =
+  "inline-block font-medium rounded transition-colors duration-200";
+
+// Variant styling
+const variantClasses = {
+  primary: "bg-blue-600 text-yellow-100 hover:bg-pink-500",
+  secondary: "bg-gray-200 text-gray-800 hover:bg-pink-500",
+  textlink:
+    "text-blue-600 underline hover:text-pink-500 bg-transparent rounded-none px-0 py-0",
+};
+
+// Size styling
+const sizeClasses = {
+  small: "text-sm px-2 py-1",
+  medium: "text-base px-3 py-1.5",
+  large: "text-lg px-4 py-2",
+  standard: "text-base", // kun til textlink
+};
 ---
-<a href={href} class="underline" target={target}><slot /></a>
+
+<a
+  href={href}
+  target={target}
+  class:list={[baseClasses, variantClasses[variant], sizeClasses[size]]}
+>
+  <slot />
+</a>

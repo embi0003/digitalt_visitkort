@@ -1,5 +1,23 @@
 ---
+const { href, target } = Astro.props;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+{
+  href ? (
+    <a
+      href={href}
+      target={target}
+      class="bg-blue-900 text-yellow-50 rounded-lg hover:bg-pink-500 text-center transition px-8 py-2 cursor-pointer shadow-inner hover:scale-105 hover:shadow-lg text-2xl inline-block"
+      style="font-family: 'Jersey 20', sans-serif;"
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      class="bg-blue-900 text-yellow-50 rounded-lg hover:bg-pink-500 text-center transition px-8 py-2 cursor-pointer shadow-inner hover:scale-105 hover:shadow-lg text-2xl"
+      style="font-family: 'Jersey 20', sans-serif;"
+    >
+      <slot />
+    </button>
+  )
+}

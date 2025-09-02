@@ -52,100 +52,107 @@ import thumbsup from "../assets/images/thumbsup.png";
         </div>
       </div>
 
-      <div class="flex flex-col sm:flex-row gap-4 mt-6">
-        <a
-          href="https://www.linkedin.com/in/emilie-s%C3%B8ndergaard-159994180"
-          class="px-4 py-2 bg-blue-900 text-yellow-50 rounded hover:bg-pink-500 text-center transition"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://dk.pinterest.com/emilie199906060/"
-          class="px-4 py-2 bg-blue-900 text-yellow-50 rounded hover:bg-pink-500 text-center transition"
-        >
-          Pinterest
-        </a>
-        <a
-          href="https://www.instagram.com/emiliers99/"
-          class="px-4 py-2 bg-blue-900 text-yellow-50 rounded hover:bg-pink-500 text-center transition"
-        >
-          Instagram
-        </a>
+      <div class="grid grid-cols-3 gap-4 w-11/12 md:w-3/4 lg:w-2/3 mt-6">
+        <div class="flex justify-start">
+          <Button
+            href="https://www.instagram.com/emiliers99/"
+            target="_blank"
+            variant="primary"
+            size="large">Instagram</Button
+          >
+        </div>
+        <div class="flex justify-center">
+          <Button
+            href="https://dk.pinterest.com/emilie199906060/"
+            target="_blank"
+            variant="primary"
+            size="large">Pinterest</Button
+          >
+        </div>
+        <div class="flex justify-end">
+          <Button
+            href="https://www.linkedin.com/in/emilie-s%C3%B8ndergaard-159994180"
+            target="_blank"
+            variant="primary"
+            size="large">LinkedIn</Button
+          >
+        </div>
       </div>
 
-      <section>
-        <h2>Kompetencer</h2>
-
-        <div>
-          <div class="flex items-center space-x-4">
-            <h3>Adobe-pakken</h3>
-            <div class="w-72 h-5 bg-pink-400 rounded-lg"></div>
+      <section
+        class="w-11/12 md:w-3/4 lg:w-2/3 mx-auto bg-pink-500 p-8 mt-12 shadow-lg rounded-xl"
+      >
+        <h2 class="text-2xl font-bold mb-6">Kompetencer</h2>
+        <div class="flex flex-col space-y-4 w-full">
+          <!-- Adobe -->
+          <div class="flex items-center space-x-4 w-full">
+            <h3 class="w-40 shrink-0">Adobe-pakken</h3>
+            <div class="h-5 bg-yellow-50 rounded-lg flex-1"></div>
           </div>
-
-          <div class="flex items-center space-x-4">
-            <h3>Figma</h3>
-            <div class="w-52 h-5 bg-pink-400 rounded-lg"></div>
+          <!-- Figma -->
+          <div class="flex items-center space-x-4 w-full">
+            <h3 class="w-40 shrink-0">Figma</h3>
+            <div class="h-5 bg-yellow-50 rounded-lg flex-1"></div>
           </div>
-
-          <div class="flex items-center space-x-4">
-            <h3>Office-pakken</h3>
-            <div class="w-64 h-5 bg-pink-400 rounded-lg"></div>
+          <!-- Office -->
+          <div class="flex items-center space-x-4 w-full">
+            <h3 class="w-40 shrink-0">Office-pakken</h3>
+            <div class="h-5 bg-yellow-50 rounded-lg flex-1"></div>
           </div>
-
-          <div class="flex items-center space-x-4">
-            <h3>Hindenburg</h3>
-            <div class="w-64 h-5 bg-pink-400 rounded-lg"></div>
+          <!-- Hindenburg -->
+          <div class="flex items-center space-x-4 w-full">
+            <h3 class="w-40 shrink-0">Hindenburg</h3>
+            <div class="h-5 bg-yellow-50 rounded-lg flex-1"></div>
           </div>
-
-          <div class="flex items-center space-x-4">
-            <h3>VS Code</h3>
-            <div class="w-64 h-5 bg-pink-400 rounded-lg"></div>
+          <!-- VS Code -->
+          <div class="flex items-center space-x-4 w-full">
+            <h3 class="w-40 shrink-0">VS Code</h3>
+            <div class="h-5 bg-yellow-50 rounded-lg flex-1"></div>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2>CV</h2>
-
-        <div>
-          <div>
-            <p>NU:</p>
-            <h3>Digitaliseringsstyrelsen</h3>
-            <p>Web- og kommunikationsmedhjælper</p>
-            <p>2024-</p>
+      <!-- CV uden boks -->
+      <section class="mt-12 w-11/12 md:w-3/4 lg:w-2/3">
+        <h2 class="text-xl font-bold mb-6">CV</h2>
+        <div class="grid grid-cols-2 gap-y-16">
+          <!-- Digitaliseringsstyrelsen -->
+          <div class="flex flex-col items-start">
+            <p class="text-pink-600 font-bold">NU:</p>
+            <h3 class="font-bold">Digitaliseringsstyrelsen</h3>
+            <p class="text-sm">Web- og kommunikationsmedhjælper</p>
+            <p class="text-sm mb-2">2024-</p>
           </div>
           <div></div>
-          <!-- tom højre kolonne -->
-
           <!-- Think PR -->
           <div></div>
-          <!-- tom venstre kolonne -->
-          <div>
-            <h3>Think PR</h3>
-            <p>Journalist og kommunikationsrådgiver</p>
-            <p>2023-2024</p>
+          <div class="flex flex-col items-end text-right">
+            <h3 class="font-bold">Think PR</h3>
+            <p class="text-sm">Journalist og kommunikationsrådgiver</p>
+            <p class="text-sm mb-2">2023-2024</p>
           </div>
-
           <!-- KNR - Nuuk -->
-          <div>
-            <h3>KNR - Nuuk</h3>
-            <p>Journalist</p>
-            <p>2022-2023</p>
+          <div class="flex flex-col items-start">
+            <h3 class="font-bold">KNR - Nuuk</h3>
+            <p class="text-sm">Journalist</p>
+            <p class="text-sm mb-2">2022-2023</p>
           </div>
           <div></div>
-
           <!-- Femina -->
           <div></div>
-          <div>
-            <h3>Femina</h3>
-            <p>Praktikant og studentermedhjælper</p>
-            <p>2020-2022</p>
+          <div class="flex flex-col items-end text-right">
+            <h3 class="font-bold">Femina</h3>
+            <p class="text-sm">Praktikant og studentermedhjælper</p>
+            <p class="text-sm">2020-2022</p>
           </div>
         </div>
-
-        <!-- Knap -->
-        <div>
-          <a href=""> Se hele mit CV </a>
+        <div class="flex justify-center mt-12">
+          <a
+            href="/cv.pdf"
+            class="bg-pink-500 text-white font-bold px-6 py-3 rounded-lg"
+          >
+            Se hele mit CV
+          </a>
         </div>
       </section>
     </section>
