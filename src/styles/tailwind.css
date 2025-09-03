@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -6,6 +6,10 @@
 @import "tailwindcss-intersect";
 
 @theme {
+  --color-bg: #fffceb;
+  --color-primary-1: #ff0095;
+  --color-primary-2: #190096;
+  --color-text: #272727;
   /* Her tilføjes theme variable // tokens */
 }
 
@@ -19,9 +23,13 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
+  .font-jersey {
+    font-family: "Jersey 20", sans-serif;
+  }
+  .font-ibmmono {
+    font-family: "IBM Plex Mono", monospace;
+  }
 }
