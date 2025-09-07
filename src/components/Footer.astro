@@ -1,6 +1,25 @@
 ---
+const email = "embi0003@stud.ek.dk";
+const phone = "+45 22 46 68 13";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<footer
+  class="bg-[var(--color-primary-2)] text-[var(--color-bg)] p-8 text-center space-y-4"
+>
+  <!-- Telefonnummer -->
+  <div class="flex justify-center space-x-2 font-ibmmono">
+    <span>Telefonnummer:</span>
+    <span>{phone}</span>
+  </div>
+
+  <!-- Email -->
+  <div class="flex justify-center space-x-2 font-ibmmono">
+    <span>Email:</span>
+    <span>{email}</span>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-[var(--color-primary-1)] font-jersey mt-4">
+    &copy; Emilie Rose Bisgaard
+  </div>
+</footer>
