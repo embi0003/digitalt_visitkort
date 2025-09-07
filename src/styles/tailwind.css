@@ -25,6 +25,7 @@
 
 @layer components {
 }
+
 @layer utilities {
   .font-jersey {
     font-family: "Jersey 20", sans-serif;

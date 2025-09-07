@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
@@ -8,54 +10,64 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 <MainLayout title="Digitalt visitkort">
   <main class="bg-[#fffceb]">
-    <section class="flex justify-center py-16">
-      <div class="bg-[#190096] p-8 flex flex-col items-center">
+    <section class="flex justify-center py-12">
+      <div
+        class="bg-[#190096] w-3/3 md:w-3/4 lg:w-2/3 flex flex-col items-center"
+      >
         <div class="relative flex flex-col items-center">
-          <h1
-            class="font-jersey text-7xl md:text-9xl lg:text-9xl uppercase text-[#ff0095] text-center"
+          <Heading
+            htmlheading="h1"
+            size="xlarge"
+            font="display"
+            stylingclasses="uppercase text-center -mt-10 lg:-mt-12"
           >
-            Emilie Rose
-          </h1>
+            Emilie Rose</Heading
+          >
           <img
             src="public/emilie.webp"
             alt=""
-            class="w-40 h-40 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover"
+            class="w-70 h-70 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover -mb-18"
           />
         </div>
       </div>
     </section>
 
-    <section class="flex flex-col items-center py-16">
-      <div class="bg-stone-100 bg-noise w-11/12 md:w-3/4 lg:w-2/3 p-8">
+    <section id="fra-journalistik" class="flex flex-col items-center">
+      <div class="bg-stone-100 bg-noise w-11/12 md:w-3/4 lg:w-2/3 p-8 mt-12">
         <div class="text-left">
-          <h2
-            class="text-[#272727] font-jersey text-2xl md:text-3xl lg:text-4xl font-bold mb-4"
+          <Heading
+            htmlheading="h2"
+            size="large"
+            font="display"
+            stylingclasses="text-bold mb-4 text-[#272727]"
           >
-            Fra journalistik til digital design
-          </h2>
+            Fra journalistik til digitalt design</Heading
+          >
 
-          <p class="mb-4 font-ibmmono text-[#272727] text-base">
+          <Text>
             Mit navn er Emilie Rose Bisgaard. Jeg er uddannet journalist, men
             valgte sidste år at udvide min faglige værktøjskasse og læse videre
             på multimediedesign på EK. Min drøm er, at jeg en dag kan leve af at
             kombinere min nysgerrighed på verden med min glæde for at designe og
             skabe skæve, sjove og kreative digitale løsninger.
-          </p>
-          <p class="mb-4 font-ibmmono text-[#272727] text-base">
+          </Text>
+          <Text>
             Som digital designer synes jeg, at det er sjovt at tænke ud af
             boksen og prøve at finde frem til løsninger, der er anderledes og ud
             over det sædvanlige. Samtidigt går jeg efter at skabe løsninger, der
             involverer brugeren og giver dem en god oplevelse.
-          </p>
-          <p class="mb-4 font-ibmmono text[#272727] text-base">
+          </Text>
+          <Text>
             Jeg glæder mig til at udvikle mig endnu mere som digital designer i
             min tid på EK og skabe sjove, kreative og brugervenlige løsninger.
-          </p>
+          </Text>
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 w-11/12 md:w-3/4 lg:w-2/3 mt-6">
-        <div class="flex justify-start">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-11/12 md:w-3/4 lg:w-2/3 mt-6"
+      >
+        <div class="flex justify-center">
           <Button
             href="https://www.instagram.com/emiliers99/"
             target="_blank"
@@ -71,7 +83,7 @@ import thumbsup from "../assets/images/thumbsup.png";
             size="large">Pinterest</Button
           >
         </div>
-        <div class="flex justify-end">
+        <div class="flex justify-center">
           <Button
             href="https://www.linkedin.com/in/emilie-s%C3%B8ndergaard-159994180"
             target="_blank"
@@ -80,125 +92,207 @@ import thumbsup from "../assets/images/thumbsup.png";
           >
         </div>
       </div>
-
       <section
-        class="w-11/12 md:w-3/4 lg:w-2/3 mx-auto bg-[#ff0095] p-8 mt-12 shadow-lg rounded-xl"
+        id="kompetencer"
+        class="w-11/12 md:w-3/4 lg:w-2/3 mx-auto bg-[#ff0095] p-8 mt-12 shadow-lg rounded-xl group"
       >
-        <h2
-          class="text-[#fffceb] font-jersey font-bold mb-6 text-2xl md:text-3xl lg:text-4xl"
-        >
-          Kompetencer
-        </h2>
-        <div class="flex flex-col space-y-4 w-full">
-          <!-- Adobe -->
-          <div class="flex items-center space-x-4 w-full">
-            <h3 class="text-[#fffceb] w-40 shrink-0 text-xl">Adobe-pakken</h3>
-            <div class="h-5 bg-[#fffceb] rounded-lg flex-1"></div>
+        <h2 class="text-3xl font-bold mb-6 text-[#fffceb]">Kompetencer</h2>
+
+        <div class="flex flex-col gap-6 w-full">
+          <div class="flex items-center w-full cursor-pointer">
+            <div class="w-32 text-[#fffceb] font-semibold">Adobe</div>
+            <div
+              class="relative h-5 bg-[#fffceb] rounded-lg flex-1 overflow-hidden"
+            >
+              <div
+                class="h-full bg-[#190096] w-0 group-hover:w-[80%] transition-all duration-[7000] cursor-pointer"
+              >
+              </div>
+            </div>
           </div>
-          <!-- Figma -->
-          <div class="flex items-center space-x-4 w-full">
-            <h3 class="text-[#fffceb] font-ibmmono w-40 shrink-0 text-xl">
-              Figma
-            </h3>
-            <div class="h-5 bg-[#fffceb] rounded-lg flex-1"></div>
+
+          <div class="flex items-center w-full cursor-pointer">
+            <div class="w-32 text-[#fffceb] font-semibold">Figma</div>
+            <div
+              class="relative h-5 bg-[#fffceb] rounded-lg flex-1 overflow-hidden"
+            >
+              <div
+                class="h-full bg-[#190096] w-0 group-hover:w-[80%] transition-all duration-[7000] cursor-pointer"
+              >
+              </div>
+            </div>
           </div>
-          <!-- Office -->
-          <div class="flex items-center space-x-4 w-full">
-            <h3 class="text-[#fffceb] font-ibmmono w-40 shrink-0 text-xl">
-              Office-pakken
-            </h3>
-            <div class="h-5 bg-[#fffceb] rounded-lg flex-1"></div>
+
+          <div class="flex items-center w-full cursor-pointer">
+            <div class="w-32 text-[#fffceb] font-semibold">Office</div>
+            <div
+              class="relative h-5 bg-[#fffceb] rounded-lg flex-1 overflow-hidden"
+            >
+              <div
+                class="h-full bg-[#190096] w-0 group-hover:w-full transition-all duration-[7000] cursor-pointer"
+              >
+              </div>
+            </div>
           </div>
-          <!-- Hindenburg -->
-          <div class="flex items-center space-x-4 w-full">
-            <h3 class="text-[#fffceb] font-ibmmono w-40 shrink-0 text-xl">
-              Hindenburg
-            </h3>
-            <div class="h-5 bg-[#fffceb] rounded-lg flex-1"></div>
+
+          <div class="flex items-center w-full cursor-pointer">
+            <div class="w-32 text-[#fffceb] font-semibold">Hindenburg</div>
+            <div
+              class="relative h-5 bg-[#fffceb] rounded-lg flex-1 overflow-hidden"
+            >
+              <div
+                class="h-full bg-[#190096] w-0 group-hover:w-full transition-all duration-[7000] cursor-pointer"
+              >
+              </div>
+            </div>
           </div>
-          <!-- VS Code -->
-          <div class="flex items-center space-x-4 w-full">
-            <h3 class="text-[#fffceb] font-ibmmono w-40 shrink-0 text-xl">
-              VS Code
-            </h3>
-            <div class="h-5 bg-[#fffceb] rounded-lg flex-1"></div>
+
+          <div class="flex items-center w-full cursor-pointer">
+            <div class="w-32 text-[#fffceb] font-semibold">VS Code</div>
+            <div
+              class="relative h-5 bg-[#fffceb] rounded-lg flex-1 overflow-hidden"
+            >
+              <div
+                class="h-full bg-[#190096] w-0 group-hover:w-[60%] transition-all duration-[7000] cursor-pointer"
+              >
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CV uden boks -->
-      <section class="mt-12 w-11/12 md:w-3/4 lg:w-2/3">
-        <h2
-          class="font-jersey font-bold mb-6 text-2xl md:text-3xl lg:text-4xl text-[#272727]"
+      <section id="cv" class="mt-12 w-11/12 md:w-3/4 lg:w-2/3">
+        <Heading
+          htmlheading="h2"
+          size="large"
+          font="display"
+          stylingclasses="font-bold mb-4 text-[#272727]"
         >
-          CV
-        </h2>
+          CV</Heading
+        >
+
         <div class="grid grid-cols-2 gap-y-16">
           <!-- Digitaliseringsstyrelsen -->
           <div class="flex flex-col items-start">
-            <p
-              class="text-[#ff0095] font-bold mb-2 text-1xl md:text-2xl lg:text-xl"
+            <Heading
+              htmlheading="h2"
+              size="large"
+              font="display"
+              stylingclasses="font-bold mb-4 text-[#ff0095]"
             >
-              NU:
-            </p>
-            <h3
-              class="font-ibmmono font-bold mb-1 text-1xl md:text-2xl lg:text-xl text-[#272727]"
+              NU:</Heading
             >
-              Digitaliseringsstyrelsen
-            </h3>
-            <p class="font-ibmmono text-sm text-[#272727]">
+
+            <Heading
+              Htmlheading="h3"
+              size="medium"
+              font="sans"
+              stylingclasses="font-bold mb-1 text-[#272727] "
+              >Digitaliseringsstyrelsen</Heading
+            >
+
+            <Heading
+              Htmlheading="h4"
+              size="small"
+              font="sans"
+              stylingclasses="mb-1"
+            >
               Web- og kommunikationsmedhjælper
-            </p>
-            <p class="text-sm mb-2 font-ibmmono text-[#272727]">2024-</p>
+            </Heading>
+
+            <Heading Htmlheading="h4" size="small" font="sans"> 2024- </Heading>
           </div>
           <div></div>
           <!-- Think PR -->
           <div></div>
           <div class="flex flex-col items-end text-right">
-            <h3
-              class="font-ibmmono font-bold mb-1 text-1xl md:text-2xl lg:text-xl text-[#272727]"
+            <Heading
+              Htmlheading="h3"
+              size="medium"
+              font="sans"
+              stylingclasses="font-bold mb-1 text-[#272727]">Think PR</Heading
             >
-              Think PR
-            </h3>
-            <p class="text-sm font-ibmmono text-[#272727]">
+            <Heading
+              Htmlheading="h4"
+              size="small"
+              font="sans"
+              stylingclasses="mb-1"
+            >
               Journalist og kommunikationsrådgiver
-            </p>
-            <p class="text-sm mb-2 font-ibmmono text-[#272727]">2023-2024</p>
-          </div>
-          <!-- KNR - Nuuk -->
-          <div class="flex flex-col items-start">
-            <h3
-              class="font-ibmmono font-bold mb-1 text-1xl md:text-2xl lg:text-xl text-[#272727]"
+            </Heading>
+            <Heading
+              Htmlheading="h4"
+              size="small"
+              font="sans"
+              stylingclasses="mb-18"
             >
-              KNR - Nuuk
-            </h3>
-            <p class="text-sm font-ibmmono text-[#272727]">Journalist</p>
-            <p class="text-sm mb-2 font-ibmmono text-[#272727]">2022-2023</p>
-          </div>
-          <div></div>
-          <!-- Femina -->
-          <div></div>
-          <div class="flex flex-col items-end text-right">
-            <h3
-              class="font-ibmmono font-bold mb-1 text-1xl md:text-2xl lg:text-xl text-[#272727]"
-            >
-              Femina
-            </h3>
-            <p class="text-sm font-ibmmono text-[#272727]">
-              Praktikant og studentermedhjælper
-            </p>
-            <p class="text-sm font-ibmmono text-[#272727]">2020-2022</p>
+              2023-2024
+            </Heading>
           </div>
         </div>
-        <div class="flex justify-center mt-12">
-          <a
-            href="/cv.pdf"
-            class="font-jersey bg-pink-500 text-white font-bold px-6 py-3 rounded-lg"
+
+        <!-- KNR - Nuuk -->
+        <div class="flex flex-col items-start">
+          <Heading
+            Htmlheading="h3"
+            size="medium"
+            font="sans"
+            stylingclasses="font-bold mb-1 text-[#272727]">KNR - Nuuk</Heading
           >
-            Se hele mit CV
-          </a>
+          <Heading
+            Htmlheading="h4"
+            size="small"
+            font="sans"
+            stylingclasses="mb-1"
+          >
+            Journalist
+          </Heading>
+          <Heading
+            Htmlheading="h4"
+            size="small"
+            font="sans"
+            stylingclasses="mb-18"
+          >
+            2022-2023
+          </Heading>
+        </div>
+        <div></div>
+        <!-- Femina -->
+        <div></div>
+        <div class="flex flex-col items-end text-right">
+          <Heading
+            Htmlheading="h3"
+            size="medium"
+            font="sans"
+            stylingclasses="font-bold mb-1 text-[#272727]">Femina</Heading
+          >
+          <Heading
+            Htmlheading="h4"
+            size="small"
+            font="sans"
+            stylingclasses="mb-1"
+          >
+            Journalistikpraktikant og studentermedhjælper
+          </Heading>
+          <Heading
+            Htmlheading="h4"
+            size="small"
+            font="sans"
+            stylingclasses="mb-1"
+          >
+            2020-2022
+          </Heading>
         </div>
       </section>
+
+      <div class="flex justify-end mt-8">
+        <a
+          href="/cv.pdf"
+          class="font-jersey bg-pink-500 text-[#fffceb] font-bold px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-[#190096] mt-8"
+        >
+          Se hele mit CV
+        </a>
+      </div>
     </section>
   </main>
 </MainLayout>
